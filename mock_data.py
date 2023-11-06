@@ -6,7 +6,6 @@ import random
 serial_port = 'COM3'
 baud_rate = 9600
 
-# Open the serial port
 ser = serial.Serial(serial_port, baud_rate)
 
 def generate_mock_data():
@@ -15,7 +14,6 @@ def generate_mock_data():
     temperature = random.randint(15, 30) 
     microphone_value = random.randint(100, 400)  
 
-    # Create the data string
     data_str = f"Air Quality: {air_quality}  Humidity: {humidity}  Temperature: {temperature}  Microphone Value: {microphone_value}\n"
     
     return data_str
